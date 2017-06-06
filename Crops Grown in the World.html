@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TOP CROPS GROWN IN THE WORLD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <!--<link rel="stylesheet" href="app.min.css">-->
+    <script src="Charts/canvasjs.min.js"></script>
+    <script src="Charts/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="app-page" data-page="home">
+        <div class="app-topbar">
+            <!--<div class="app-title">Send Quick Text Message</div>-->
+            <div class="app-title">TOP CROPS GROWN IN THE WORLD</div>
+        </div>
+        <div class="app-content">
+
+            <br />
+            <i>
+                Top crops grown in the world.
+            </i>
+            <br />
+            <br />
+            <div id="graphArea"></div>
+            <div style="min-height:100%"></div>
+            <script type="text/javascript">
+                var chart = new CanvasJS.Chart("graphArea", {
+                    theme: "theme2",//theme1
+                    title: {
+                        text: ""
+                    },
+                    animationEnabled: false,   // change to true
+                    data: [
+                    {
+                        // Change type to "bar", "splineArea", "area", "spline", "pie", "column"etc.
+                        type: "pie",
+                        dataPoints: [
+                    { label: "Wheat", y: "48" },
+                    { label: "Barley", y: "18" },
+                    { label: "Maize", y: "19" },
+                    { label: "Oats", y: "3" },
+                    { label: "Others", y: "12" }
+                        ]
+                    }
+                    ]
+                });
+                chart.render();
+            </script>
+
+
+        </div>
+    </div>
+
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+</body>
+</html>
